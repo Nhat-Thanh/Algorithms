@@ -1,6 +1,4 @@
-import sys
 tempArr = [0] * 10
-
 
 def mergeSort(arr, first, last):
     if first == last:

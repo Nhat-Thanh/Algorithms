@@ -1,5 +1,3 @@
-import sys
-
 def heapify(arr, n, index):
     largest = index
     left = (index << 1) + 1

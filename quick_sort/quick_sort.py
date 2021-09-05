@@ -1,5 +1,3 @@
-import sys
-
 def quickSort(arr, first, last):
     pivot = arr[(first + last) >> 1]
     left = first
