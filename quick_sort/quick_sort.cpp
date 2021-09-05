@@ -1,34 +1,35 @@
 #include <iostream>
 
-void quickSort(int array[], const int& first, const int& last) {
-    int pivot = array[(first + last) >> 1];
+void quickSort(int arr[],
+               const int& first,
+               const int& last) {
+    int pivot = arr[(first + last) >> 1];
     int left = first;
     int right = last;
 
     while (left <= right) {
-        while (array[left] < pivot)
+        while (arr[left] < pivot)
             left++;
-        while (array[right] > pivot)
+        while (arr[right] > pivot)
             right--;
 
         if (left <= right) {
-            /* swap 2 values */
-            std::swap(array[left], array[right]);
+            std::swap(arr[left], arr[right]);
             left++;
             right--;
         }
     }
 
     if (first < right)
-        quickSort(array, first, right);
+        quickSort(arr, first, right);
     if (left < last)
-        quickSort(array, left, last);
+        quickSort(arr, left, last);
 }
 
 int main() {
-    int array[10] = {2, 7, 8, 4, -9, 0, -100, 20, 45, 3};
-    quickSort(array, 0, 9);
+    int arr[10] = {2, 7, 8, 4, -9, 0, -100, 20, 45, 3};
+    quickSort(arr, 0, 9);
     for (int index = 0; index < 10; ++index)
-        std::cout << array[index] << " ";
+        std::cout << arr[index] << " ";
     return 0;
 }

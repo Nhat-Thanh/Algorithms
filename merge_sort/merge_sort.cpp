@@ -1,31 +1,33 @@
 #include <iostream>
 
-int arrayTemp[10];
+int tempArr[10];
 
-void mergeSort(int array[], int first, int last) {
+void mergeSort(int arr[],
+               const int& first,
+               const int& last) {
     if (first == last)
         return;
     int mid = (first + last) >> 1;
-    mergeSort(array, first, mid);
-    mergeSort(array, mid + 1, last);
-    
+    mergeSort(arr, first, mid);
+    mergeSort(arr, mid + 1, last);
+
     int left = first;
     int right = mid + 1;
     int limit = 0;
 
     while (left <= mid || right <= last) {
         if (left > mid)
-            arrayTemp[limit++] = array[right++];
+            tempArr[limit++] = arr[right++];
         else if (right > last)
-            arrayTemp[limit++] = array[left++];
-        else if (array[left] < array[right])
-            arrayTemp[limit++] = array[left++];
+            tempArr[limit++] = arr[left++];
+        else if (arr[left] < arr[right])
+            tempArr[limit++] = arr[left++];
         else
-            arrayTemp[limit++] = array[right++];
+            tempArr[limit++] = arr[right++];
     }
 
     for (int i = 0; i < limit; ++i)
-        array[first + i] = arrayTemp[i];
+        arr[first + i] = tempArr[i];
 }
 
 int main() {

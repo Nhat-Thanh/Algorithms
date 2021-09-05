@@ -21,7 +21,10 @@
             "javascript": "node",
             "java": "cd $dir && javac $fileName && java $fileNameWithoutExt && rm $fileNameWithoutExt.class",
             "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $fileNameWithoutExt",
-            "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $fileNameWithoutExt",
+            // Windows
+            "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $fileNameWithoutExt.exe",
+            //  linux
+            // "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $fileNameWithoutExt",
             "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
             "php": "php",
             "python": "python -u",
@@ -35,7 +38,7 @@
             "bat": "cmd /c",
             "shellscript": "bash",
             "fsharp": "fsi",
-            "csharp": "scriptcs",
+            "csharp": "cd $dir && csc $fileName && $dir$fileNameWithoutExt && rm $fileNameWithoutExt.exe",
             "vbscript": "cscript //Nologo",
             "typescript": "ts-node",
             "coffeescript": "coffee",
