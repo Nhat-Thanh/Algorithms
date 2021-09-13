@@ -130,6 +130,9 @@
                 "italic": false
             }
         ],
+        "files.associations": {
+            "iostream": "cpp"
+        },
     },
     "extensions": {
         "recommendations": [
