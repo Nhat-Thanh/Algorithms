@@ -3,7 +3,7 @@ Problem link: [hackerrank](https://www.hackerrank.com/challenges/inherited-code/
 
 You inherited a piece of code that performs username validation for your company's website. The existing function works reasonably well, but it throws an exception when the username is too short. Upon review, you realize that nobody ever defined the exception.
 
-The inherited code is provided for you in the locked section of your editor. Complete the code so that, when an exception is thrown, it prints `Too short: n` (where **n** is the length of the given username).
+The inherited code is provided for you in the locked section of your editor. Complete the code so that, when an exception is thrown, it prints **Too short: n** (where **n** is the length of the given username).
 
 **Input Format**
 
@@ -17,7 +17,7 @@ Each of the **t** subsequent lines describes a test case as a single username st
 
 **Output Format**
 
-You are not responsible for directly printing anything to stdout. If your code is correct, the locked stub code in your editor will print either `Valid` (if the username is valid), `Invalid` (if the username is invalid), or `Too short: n` (where **n** is the length of the too-short username) on a new line for each test case.
+You are not responsible for directly printing anything to stdout. If your code is correct, the locked stub code in your editor will print either **Valid** (if the username is valid), **Invalid** (if the username is invalid), or **Too short: n** (where **n** is the length of the too-short username) on a new line for each test case.
 
 **Sample Input**
 ```
