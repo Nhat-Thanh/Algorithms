@@ -131,7 +131,11 @@
             }
         ],
         "files.associations": {
-            "iostream": "cpp"
+            "iostream": "cpp",
+            "ostream": "cpp",
+            "stdexcept": "cpp",
+            "string": "cpp",
+            "vector": "cpp"
         },
     },
     "extensions": {
