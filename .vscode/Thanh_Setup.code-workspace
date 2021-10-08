@@ -21,10 +21,8 @@
             "javascript": "node",
             "java": "cd $dir && javac $fileName && java $fileNameWithoutExt && rm $fileNameWithoutExt.class",
             "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $fileNameWithoutExt",
-            // Windows
-            "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $fileNameWithoutExt.exe",
-            //  linux
-            // "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt && rm $fileNameWithoutExt",
+            // "cpp": "cd $dir && g++ \"$fileName\" -o \"$fileNameWithoutExt\" && $dir\"$fileNameWithoutExt\" && rm \"$fileNameWithoutExt.exe\"",
+            "cpp": "cd $dir && g++ \"$fileName\" -o \"$fileNameWithoutExt\" && ./\"$fileNameWithoutExt\" && rm \"$fileNameWithoutExt\"",
             "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
             "php": "php",
             "python": "python -u",
@@ -130,13 +128,6 @@
                 "italic": false
             }
         ],
-        "files.associations": {
-            "iostream": "cpp",
-            "ostream": "cpp",
-            "stdexcept": "cpp",
-            "string": "cpp",
-            "vector": "cpp"
-        },
     },
     "extensions": {
         "recommendations": [
